@@ -1,0 +1,35 @@
+{
+  "name": "listh-index",
+  "version": "1.0.0",
+  "description": "lists wos h-index",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-packager . --asar",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zakcali/listh-index.git"
+  },
+  "keywords": [
+    "electron",
+    "web of science",
+    "h-index",
+    "ResearcherId",
+    "nodejs"
+  ],
+  "author": "Zafer Akcali",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zakcali/listh-index/issues"
+  },
+  "homepage": "https://github.com/zakcali/listh-index#readme",
+  "devDependencies": {
+    "electron": "^21.2.2",
+    "electron-packager": "^17.1.1"
+  },
+  "dependencies": {
+    "node-fetch-commonjs": "^3.2.4"
+  }
+}
