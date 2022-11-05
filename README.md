@@ -1,5 +1,5 @@
 # listh-index
-An Electron application written in Javascript.
+An Electron application written in Javascript/nodejs.
 
 iputs ResearcherIds one by line either entered or pasted.
 
