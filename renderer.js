@@ -23,7 +23,7 @@ for (let ele of ridArray ) {
 	infoText.innerHTML = i;
 	}
 }
-infoText.innerHTML = 'Atıfı hesaplanan yazar sayısı = '+i;
+infoText.innerHTML = 'Number of authors calculated for = '+i;
 
 });
 
