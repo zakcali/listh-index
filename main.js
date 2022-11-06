@@ -55,10 +55,10 @@ ipcMain.handle('save', async (event, saveText) => {
 ipcMain.handle('checkHindex', async (event, rid) => {
 let returnText='\"'+'https://www.webofscience.com/wos/author/rid/'+rid+'\"'
 url = 'https://www.webofscience.com/wos/api/proxy/wos-researcher/stats/individual/' + rid +'/' 
-const response = await fetch(url);
 const today = new Date();
 const yyyy = today.getFullYear();
 try {
+const response = await fetch(url);
 const data = await response.json();
 // console.log(data);
 if (data['detail']=="Not found.")
