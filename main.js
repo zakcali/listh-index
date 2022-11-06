@@ -50,19 +50,21 @@ ipcMain.handle('save', async (event, saveText) => {
       return ('The file has been saved!');
     });
   }
-	})
+})
 
 ipcMain.handle('checkHindex', async (event, rid) => {
 let returnText='\"'+'https://www.webofscience.com/wos/author/rid/'+rid+'\"'
 url = 'https://www.webofscience.com/wos/api/proxy/wos-researcher/stats/individual/' + rid +'/' 
 const response = await fetch(url);
+const today = new Date();
+const yyyy = today.getFullYear();
 try {
 const data = await response.json();
 // console.log(data);
 if (data['detail']=="Not found.")
-	return (returnText+'\t'+rid+'\tn/a')
+	return (returnText+'\t'+rid+'\t'+'')
 returnText=returnText+'\t'+rid+'\t'+data['hIndex']+'\t'+data['timesCited']+'\t'+data['numPublicationsInWosCc']
-for (i=2022; i>1960; i--) {
+for (i=yyyy; i>1960; i--) {
 	let cpyear = data['citationsPerYear'][i.toString()]
 		if (cpyear)
 			returnText=returnText+'\t'+cpyear
