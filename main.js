@@ -54,7 +54,7 @@ ipcMain.handle('save', async (event, saveText) => {
 
 ipcMain.handle('checkHindex', async (event, rid) => {
 let returnText='\"'+'https://www.webofscience.com/wos/author/rid/'+rid+'\"'
-const url = 'https://www.webofscience.com/wos/api/proxy/wos-researcher/stats/individual/' + rid +'/' 
+const url = 'https://publons.com/wos-op/api/stats/individual/' + rid +'/' 
 const today = new Date();
 const yyyy = today.getFullYear();
 try {
